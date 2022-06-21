@@ -6,7 +6,7 @@ import { CronJob } from 'cron';
 import frameScrapper from './scrapper';
 var cronJob: CronJob;
 
-cronJob = new CronJob('*/3 * * * *', async () => {
+cronJob = new CronJob('1 7,9,11,13,14,16,19,20,21,22,23 * * *', async () => {
   const scrapper = await new frameScrapper();
   try {
     const postDescription = await scrapper.getRandomFrame();
